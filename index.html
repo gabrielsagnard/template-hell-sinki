@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hell'sinki</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='Un template pour vos organisations.'>
+    <meta property="og:title" content="Hell'sinki">
+    <meta property="og:site_name" content="Hell'sinki">
+    <meta property="og:url" content="index.html">
+    <meta property="og:description" content="">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- TITLE/ANIMATION -->
+    <header style='position: relative;' class='header'>
+      <div class='background' style='position: absolute; top: 0; bottom: 0; left: 0; right: 0;'></div>
+      <div class='logo'>
+        <h1>Hell'sinki</h1>
+        <hr />
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <div class="about">
+      <div class="intro">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <hr />
+              <h1>Hell'sinki</h1>
+              <h2>Community of IT Professionals</h2>
+            </div>
+            <div class="col-md-4">
+            <!-- Negative Space above "let's talk"-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                <p>
+                  I consult before embarking on a computer project. I ask for help during the development of my projects. Hell'sinki contact me to give me the best of follow-ups. Collaborate for free with me. It's awesome.
+                </p>
+              </div>
+              <div class="col-md-4">
+                <p>
+                  Hell'sinki is a self-help community. Each member brings its share of knowledge. It provides the most precise, objective and subjective answers on a wide range of topics.
+                </p>
+              </div>
+              <div class="col-md-4 mailing-list">
+                <p>
+                  I have an idea that I do not dare to launch. I wonder how and with what technology to realize my project. I am completely stuck and lost in its development.
+                </p>
+                <a class="btn" href="mailto:hellsinki@googlegroups.com">I contact Hell'sinki!</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      // Scroll to Fade header
+      $(window).scroll(function(){
+        $(".header").css("opacity", 1 - ($(window).scrollTop() - 300) / 1000);
+      });
+
+      // Select a random color at loading
+      var colors = [
+          "#F44336", // red
+          "#E91E63", // pink
+          "#9C27B0", // purple
+          "#673AB7", // deep purple
+          "#3F51B5", // indigo
+          "#2196F3", // blue
+          "#03A9F4", // light blue
+          "#00BCD4", // cyan
+          "#009688", // teal
+          "#4CAF50", // green
+          "#8BC34A", // light green
+          "#CDDC39", // lime
+          "#FFEB3B", // yellow
+          "#FFC107", // amber
+          "#FF9800", // orange
+          "#FF5722", // deep orange
+          "#795548", // brown
+          "#9E9E9E", // grey
+          "#607D8B", // blue grey
+      ];
+
+      var color = colors[parseInt(Math.random() * colors.length)];
+
+      $("body").css("background-color", color);
+      $(".header hr").css("border-top-color", color);
+      $(".header h1").css("color", color);
+      $(".intro .col-md-4").css("background-color", color);
+      $(".btn").css("background-color", color);
+      $(".btn:active").css("color", color);
+    </script>
+
+  </body>
+
+</html>
